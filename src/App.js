@@ -8,6 +8,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import AuthProvider from './components/AuthProvider';
 import Home from './pages/Home';
+import Profile from './pages/Profile';
 
 
 class App extends Component {
@@ -15,12 +16,14 @@ class App extends Component {
     return (
       <AuthProvider>
         <div className="container">
-          <h1>Basic React Authentication</h1>
+          <h1>QBox - Organiza tu mudanzas y almacenajes</h1>
           <Navbar />
+          {/* <Profile /> */}
           <Switch>
             <Route exact path="/" component={Home} />
-            <AnonRoute path="/signup" component={Signup} />
-            <AnonRoute path="/login" component={Login} />
+            <AnonRoute exact path="/signup" component={Signup} />
+            <AnonRoute exact path="/login" component={Login} />
+            <AnonRoute exact path="/profile" component={Profile} />
             <PrivateRoute path="/private" component={Private} />
           </Switch>
         </div>
