@@ -9,6 +9,8 @@ import Login from './pages/Login';
 import AuthProvider from './components/AuthProvider';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
+import EditProfile from './pages/EditProfile';
+import Move from './pages/Move';
 
 
 class App extends Component {
@@ -23,7 +25,9 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <AnonRoute exact path="/signup" component={Signup} />
             <AnonRoute exact path="/login" component={Login} />
-            <AnonRoute exact path="/profile" component={Profile} />
+            <PrivateRoute exact path="/profile" component={Profile} />
+            <PrivateRoute exact path="/edit-profile" component={EditProfile} />
+            <PrivateRoute exact path="/move" component={Move} />
             <PrivateRoute path="/private" component={Private} />
           </Switch>
         </div>
