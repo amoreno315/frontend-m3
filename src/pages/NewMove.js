@@ -5,6 +5,7 @@ class NewMove extends Component {
   render() {
     return (
       <div>
+        Formulario nueva mudanza
         <NewMove />
       </div>
     )
