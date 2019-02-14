@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import move from '../lib/move-service';
 import NewMove from '../components/NewMove';
 import { Link } from 'react-router-dom';
+import { withAuth } from '../components/AuthProvider';
+import Navbar from '../components/Navbar';
 
-
-export default class Move extends Component {
+class Move extends Component {
   state = {
     moves: null,
   }
@@ -33,25 +34,27 @@ export default class Move extends Component {
     const {moves} = this.state;
     
     if (this.state.moves) {
-      console.log(this.state.moves)
-      console.log(moves)
+      // console.log(this.state.moves)
+      // console.log(moves)
       return(
-        <div>
+        <div className="flex-col-center">
+          <Navbar/>
           <h1>Mis mudanzas</h1>
-        {moves.map(move => {
+          {moves.map(move => {
           return(
-            <Link to={`/moves/${move._id}`}>
-                <p>{move.title}</p>
-              </Link>
-            // <p>{move.title}</p>
+            <Link to={`/move/${move._id}`}>
+              <p>{move.title}</p>
+                
+            </Link>
           )
-         
-        })}
-        {/* esta funcion me da un error: moves.map no es una funcion */}
-      </div>
+          })}
+          <h3>Add a New Move</h3>
+          <NewMove />
+        </div>
       )
     } else {
       return <NewMove />;
     }
   }
 }
+export default withAuth()(Move);

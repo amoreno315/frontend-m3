@@ -28,16 +28,22 @@ class Login extends Component {
   render() {
     const { username, password } = this.state;
     return (
-      <div>
-        <form onSubmit={this.handleFormSubmit}>
+      <div className="flex-col-center">
+        <div className="flex-col-center">
+          <h1>QBox</h1>
+          <p>Qbox is your solution to organize your moves and know the contents of each box</p>
+        </div>
+        <form className="form-center" onSubmit={this.handleFormSubmit}>
           <label>Username:</label>
           <input type="text" name="username" value={username} onChange={this.handleChange}/>
           <label>Password:</label>
           <input type="password" name="password" value={password} onChange={this.handleChange} />
-          <input type="submit" value="Login" />
+          <input className="btn" type="submit" value="Login" />
+
         </form>
-        <p>Already have account? 
-          <Link to={"/signup"}> Signup</Link>
+        <hr/>
+        <p>Don't you have an acount? 
+          <Link className="btn" to={"/signup"}> Signup</Link>
         </p>
       </div>
     )

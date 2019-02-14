@@ -5,15 +5,16 @@ import { withAuth } from '../components/AuthProvider';
 class Navbar extends Component {
 
   renderIsLoggedIn = () => {
-    return <div>
-      <p>username: {this.props.user.username}</p>
-      <p onClick={this.props.logout}>Logout</p>
-      <Link to='/'>Home</Link>
-      <Link to='/profile'>Profile</Link>
+    return <div className="navbar-items">
+      {/* <p>Wellcome: {this.props.user.username}</p> */}
+      
+      <Link className="btn"to='/'>Home</Link>
+      <Link className="btn"to='/profile'>Profile</Link>
      
       {/* <Link to='/mymove'>My Move</Link> */}
-      <Link to='/search'>Search</Link>
-      <Link to='/tips'>Tips</Link>
+      <Link className="btn" to='/move'>Moves</Link>
+      {/* <Link to='/tips'>Tips</Link> */}
+      <p className="btn" onClick={this.props.logout}>Logout</p>
     </div>
   }
 
@@ -31,22 +32,7 @@ class Navbar extends Component {
       </div>
     )
   }
-  // render() {
-  //   const { isLogged, user, logout } = this.props;
-  //   const { username } = user;
-  //   if (isLogged) {
-  //     return <div>
-  //       <p>username: { username }</p>
-  //       <p onClick={logout}>Logout</p>
-  //     </div>
-  //   } else {
-  //     return <div>
-  //       <Link to='/login'>Login</Link>
-  //       {/* <Link to='/signup'>Signup</Link> */}
-  //     </div>
-  //   }
-  
-  // }
+
 }
 
 export default withAuth()(Navbar);

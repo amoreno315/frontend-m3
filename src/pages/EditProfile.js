@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withAuth } from '../components/AuthProvider';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 
 import auth from '../lib/auth-service';
 
@@ -59,17 +59,19 @@ class Profile extends Component {
     }
     return (
       <div className="botton">
-      <form id="edit-form" >
-        <label>Username:</label>
+      <form className="form-center" >
+        <label><strong>Username:</strong></label>
         <input type="text" name="username" value={this.state.username} placeholder={user.username} onChange={this.handleChange} />
-        <label>Fisrt Name:</label>
+        <label><strong>Fisrt Name:</strong></label>
         <input type="text" name="firstname" value={this.state.firstname} placeholder={user.firstname} onChange={this.handleChange}/>
-        <label>Last Name:</label>
+        <label><strong>Last Name:</strong></label>
         <input type="text" name="lastname" value={this.state.lastname} placeholder={user.lastname} onChange={this.handleChange}/>
-        <label>Avatar:</label>
+        <label><strong>Avatar:</strong></label>
         <input type="text" name="avatar" value={this.state.avatar} placeholder={user.avatar} onChange={this.handleChange}/>
-        <button type="submit" onClick={this.handleFormSubmit}>Submit!</button>
+        <button className="btn" type="submit" onClick={this.handleFormSubmit}>Submit!</button>
+        <Link to='/profile' className="btn">Go Back</Link>
       </form>
+      
       {/* <input type="text" name="move" onChange={this.handleChange} ></input>
       <button type="submit" onClick={this.handlesearchSubmit}>Search!</button> */}
       </div>

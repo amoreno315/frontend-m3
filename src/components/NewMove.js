@@ -47,18 +47,18 @@ class NewMove extends Component {
     }
       return (
         <div>
-          <div>
-            <form onSubmit={this.handleFormSubmit} id="add-move">
+          <div className="flex-col-center">
+            <form className="form-center"onSubmit={this.handleFormSubmit} id="add-move">
               <label>Title</label>
               <input type="text" name="title" placeholder="Name" value={this.state.title} onChange={ e => this.handleChange(e)}/>
               <label>Date</label>
               <input type="date" name="date" placeholder="15/02/2019" value={this.state.date} onChange={ e => this.handleChange(e)}/>
               <label>Origin</label>
-              <textarea type="text" name="origin" placeholder="Origin" value={this.state.origin} onChange={ e => this.handleChange(e)}/>
+              <input type="text" name="origin" placeholder="Origin" value={this.state.origin} onChange={ e => this.handleChange(e)}/>
               <label>Destination</label>
               <input type="text" name="destination" placeholder="Destination" value={this.state.destination} onChange={ e => this.handleChange(e)}/>
               <label>Description</label>
-              <input type="text" name="description" placeholder="Description" value={this.state.description} onChange={ e => this.handleChange(e)}/>
+              <textarea type="text" name="description" placeholder="Description" value={this.state.description} onChange={ e => this.handleChange(e)}/>
               
               <br></br>
             <button type="submit" >ADD NEW</button>
