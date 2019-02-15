@@ -26,7 +26,7 @@ class NewMove extends Component {
   
     move.create({title, date, origin, destination, description, owner })
     .then( (result) => {
-      console.log(result);
+      // console.log(result);
       this.setState({...this.state,redirect:true})
     })
     .catch(err => {

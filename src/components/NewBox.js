@@ -25,12 +25,12 @@ class NewBox extends Component {
     const owner = this.props.user._id;
     const move = this.props.match.params.id; //aqui falla
 
-    console.log("user id - create box", owner)
-    console.log("id move - create box", move)
+    // console.log("user id - create box", owner)
+    // console.log("id move - create box", move)
 
     box.create({boxnummer, boxname, category, description, storagelocation, owner, move})
       .then( (result) => {
-        console.log(result);
+        //console.log(result);
         this.setState({...this.state, redirect: true})
       })
       .catch( err => {
@@ -46,7 +46,7 @@ class NewBox extends Component {
 
     if (this.state.redirect) {
       return (
-        <Redirect to="/moves" />
+        <Redirect to="/move" />
       )
     }
     return (

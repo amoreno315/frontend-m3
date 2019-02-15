@@ -16,10 +16,10 @@ class InfoBox extends Component {
   componentDidMount() {
     const id = this.props.match.params.id;
     //aqui es undefined
-    console.log("this.props id de box", this.props)
+    // console.log("this.props id de box", this.props)
     box.boxInfo(id)
       .then((result) => {
-        console.log(result) //devuelve array con los datos
+        // console.log(result) //devuelve array con los datos
         this.setState({
           
           info: result
@@ -30,7 +30,7 @@ class InfoBox extends Component {
 
   render() {
       let {info} = this.state;
-      console.log("info", this.state)
+      // console.log("info", this.state)
       if (this.state.info) {
         // aqui no entra
         return (

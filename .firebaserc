@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "qbox": "qbox-app",
+    "default": "qbox-app"
+  }
+}

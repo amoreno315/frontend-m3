@@ -45,7 +45,7 @@ class InfoMove extends Component {
             {/* <h1>{info._id}</h1> */}
             {/* esto tengo que pasarlo al componente NewBox */}
             <h3>{info.title}</h3>
-            <p>Date: {info.date}</p>
+            {/* <p>Date: {info.date}</p> */}
             <p>Origin: {info.origin}</p>
             <p>Destination: {info.destination}</p>
             <p>Description: {info.description}</p>
