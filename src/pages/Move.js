@@ -40,12 +40,14 @@ class Move extends Component {
         <div className="flex-col-center">
           <Navbar/>
           <h1>Mis mudanzas</h1>
-          {moves.map(move => {
+          {moves.map((move, idx) => {
           return(
-            <Link to={`/move/${move._id}`}>
-              <p>{move.title}</p>
+            <li key={idx}>
+              <Link to={`/move/${move._id}`}>
+                <p className="link-map">{move.title}</p>
                 
-            </Link>
+              </Link>
+            </li>
           )
           })}
           <h3>Add a New Move</h3>
