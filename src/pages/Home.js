@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { withAuth } from '../components/AuthProvider';
 import Navbar from '../components/Navbar'
 class Home extends Component {
@@ -25,7 +25,6 @@ class Home extends Component {
       </div>
     }
     render() {
-      const {isLogged} = this.props;
       return (
         <div>
           { this.props.isLogged ? this.renderIsLoggedIn() : this.renderIsNotLoggedIn() }

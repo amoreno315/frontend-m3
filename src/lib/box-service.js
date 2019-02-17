@@ -14,19 +14,21 @@ class Box {
   }
 
   getBox() {
-    return this.box.get('/box/get')
+    return this.box.get('box/get')
       .then (({data}) => data);
       
   }
 
   boxInfo(id) {
-    const boxId = id;
-    console.log("id en boxService", boxId);
-    return this.box.get(`/box/${boxId}`)
+    return this.box.get('box/' + id )
       .then (( {data}) => data)
   }
+  addItem(id, item){
+    const {nameitem, description} = item;
+    return this.box.post('box/addItem', {nameitem, description, id})
+        .then( ({data}) => data);
+  }
 }
-
 
 const box = new Box();
 export default box;

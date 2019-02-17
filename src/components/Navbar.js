@@ -25,7 +25,6 @@ class Navbar extends Component {
     </div>
   }
   render() {
-    const {isLogged} = this.props;
     return (
       <div>
         { this.props.isLogged ? this.renderIsLoggedIn() : this.renderIsNotLoggedIn() }
