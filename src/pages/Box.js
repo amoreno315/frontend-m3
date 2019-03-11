@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withAuth } from '../components/AuthProvider';
 import box from '../lib/box-service';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import NewBox from '../components/NewBox';
 
 class Box extends Component {

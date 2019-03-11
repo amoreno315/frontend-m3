@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
 import move from '../lib/move-service';
-import box from '../lib/box-service';
 import NewBox from '../components/NewBox';
 import Box from '../pages/Box';
 import Navbar from '../components/Navbar';
@@ -37,8 +35,6 @@ class InfoMove extends Component {
       if (this.state.info) {
         // aqui no entra
         return (
-         
-        
           <div className="flex-col-center">
            <Navbar/>
             <h2>Move Details</h2>

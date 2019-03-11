@@ -34,7 +34,7 @@ class NewBox extends Component {
         this.setState({...this.state, redirect: true})
       })
       .catch( err => {
-        console.log("Somethin went wrong", err);
+        console.log("Something went wrong", err);
       })
   }
 

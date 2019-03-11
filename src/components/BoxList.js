@@ -15,8 +15,6 @@ class BoxList extends Component {
         this.setState({
           boxes: results,
         })
-        console.log("aqui si hay datos", results);
-        console.log("aqui es null", this.state.boxes);
       })
 
       .catch ((error) => {
@@ -26,7 +24,6 @@ class BoxList extends Component {
   }
   render() {
     const {boxes} = this.state;
-    console.log("aqui es null", this.state)
     if (this.state.boxesList) {
       return(
         <div className="flex-col-center">

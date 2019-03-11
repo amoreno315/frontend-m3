@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Route, Switch} from 'react-router-dom'
 import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
-import Navbar from './components/Navbar';
+//import Navbar from './components/Navbar';
 import Private from './pages/Private';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
@@ -12,7 +12,7 @@ import Profile from './pages/Profile';
 import EditProfile from './pages/EditProfile';
 import Move from './pages/Move';
 import InfoMove from './pages/InfoMove';
-import BurgerMenu from './components/BugerMenu'
+//import BurgerMenu from './components/BugerMenu'
 import Box from './pages/Box';
 import InfoBox from './pages/InfoBox';
 
